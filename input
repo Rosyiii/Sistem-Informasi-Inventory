@@ -1,0 +1,180 @@
+$Employers = new App\Models\Employers
+
+$Employers::create(
+    [
+        "id_user" => "U-001",
+        "nama" => "karyawan 1",
+        "alamat" => "umbulharjo",
+        "tempat_lahir" => "Sleman",
+        "ijazah_terakhir" => "S3 ekonomi",
+        "username" => "karyawan1",
+        "password" => "123456abcdef",
+        "jabatan" => "Owner"
+])
+$Employers::create(
+    [
+        "id_user" => "U-002",
+        "nama" => "karyawan 2",
+        "alamat" => "Ngaglik",
+        "tempat_lahir" => "Sleman",
+        "ijazah_terakhir" => "Pendidikan Profesi Guru",
+        "username" => "karyawan2",
+        "password" => "123456abcdef",
+        "jabatan" => "Store Manager"
+])
+$Employers::create(
+    [
+        "id_user" => "U-003",
+        "nama" => "karyawan 3",
+        "alamat" => "Jogokaryan",
+        "tempat_lahir" => "Yogyakarta",
+        "ijazah_terakhir" => "SLTA/Sederajar",
+        "username" => "karyawan3",
+        "password" => "123456abcdef",
+        "jabatan" => "Karyawan"
+])
+
+
+$Supplier = new App\Models\Supplier
+
+$Supplier::create(
+    [
+        "nama" => "Supplier 1",
+        "id_supplier" => "SS-001",
+        "alamat" => "Tempel Sleman",
+        "nama_cp" => "Jodi",
+        "no_hp_cp" => "0895339621927"
+])
+
+$Supplier::create(
+    [
+        "nama" => "Supplier 2",
+        "id_supplier" => "SS-002",
+        "alamat" => "Tempel Sleman",
+        "nama_cp" => "Nugroho",
+        "no_hp_cp" => "089628164526"
+])
+
+$Stok = new App\Models\Stok
+$Stok::create(
+    [
+        "nama" => "stok 1",
+        "id_stok" => "S-001",
+        "id_supplier" => "SS-001",
+        "jml_stok" => 256,
+        "satuan" => "Meter",
+        "harga_beli" => 256000,
+        "harga_jual" => 275000,
+        "biaya_pesan" => 12800,
+        "biaya_simpan" => 12800,
+        "waktu_antar" => 1
+])
+
+$Stok::create(
+    [
+        "nama" => "stok 2",
+        "id_stok" => "S-002",
+        "id_supplier" => "SS-001",
+        "jml_stok" => 100,
+        "satuan" => "Pack",
+        "harga_beli" => 300000,
+        "harga_jual" => 350000,
+        "biaya_pesan" => 15000,
+        "biaya_simpan" => 15000,
+        "waktu_antar" => 1
+])
+
+$Stok::create(
+    [
+        "nama" => "stok 3",
+        "id_stok" => "S-003",
+        "id_supplier" => "SS-002",
+        "jml_stok" => 100,
+        "satuan" => "Unit",
+        "harga_beli" => 100000,
+        "harga_jual" => 100000,
+        "biaya_pesan" => 5000,
+        "biaya_simpan" => 5000,
+        "waktu_antar" => 1
+])
+
+$Total_transaksi_jual = new App\Models\TotalTransaksiJual
+$Total_transaksi_jual::create(
+    [
+        "id_transaksi" => "T-001",
+        "id_user" => "U-002",
+        "total_harga" => 550000
+])
+
+$Total_transaksi_jual::create(
+    [
+        "id_transaksi" => "T-002",
+        "id_user" => "U-001",
+        "total_harga" => 550000
+])
+
+$Transaksi_jual = new App\Models\TransaksiJual
+
+$Transaksi_jual::create(
+    [
+        "id_transaksi" => "T-001",
+        "id_stok" => "S-002",
+        "jumlah" => 1,
+        "harga_satuan" => 350000,
+        "total_harga" => 350000
+])
+
+$Transaksi_jual::create(
+    [
+        "id_transaksi" => "T-001",
+        "id_stok" => "S-003",
+        "jumlah" => 2,
+        "harga_satuan" => 100000,
+        "total_harga" => 200000
+])
+
+$Transaksi_jual::create(
+    [
+        "id_transaksi" => "T-002",
+        "id_stok" => "S-003",
+        "jumlah" => 2,
+        "harga_satuan" => 350000,
+        "total_harga" => 700000
+])
+    
+$Transaksi_masuk = new App\Models\TransaksiMasuk
+$Transaksi_masuk::create([
+    "id_transaksi_masuk" => "TI-001",
+    "id_stok" => "S-001",
+    "id_supplier" => "SS-001",
+    "id_user" => "U-001",
+    "jml_stok" => 56,
+    "harga_beli" => 256000,
+    "harga_total" => 14336000,
+    "biaya_pesan" => 716800,
+    "waktu_antar" => 1
+])
+
+$Transaksi_masuk::create([
+    "id_transaksi_masuk" => "TI-002",
+    "id_stok" => "S-003",
+    "id_supplier" => "SS-002",
+    "id_user" => "U-002",
+    "jml_stok" => 10,
+    "harga_beli" => 100000,
+    "harga_total" => 1000000,
+    "biaya_pesan" => 50000,
+    "waktu_antar" => 1
+])
+
+$Transaksi_masuk::create([
+    "id_transaksi_masuk" => "TI-003",
+    "id_stok" => "S-002",
+    "id_supplier" => "SS-001",
+    "id_user" => "U-001",
+    "jml_stok" => 10,
+    "harga_beli" => 350000,
+    "harga_total" => 3500000,
+    "biaya_pesan" => 175000,
+    "waktu_antar" => 1
+])
