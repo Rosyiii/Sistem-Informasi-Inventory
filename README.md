@@ -3,7 +3,7 @@
 Sistem ini dibuat menggunakan framework Laravel 10 dikombinasikan dengan Bootstrap CSS. Sistem ini dapat meningkatkan efektivitas dan aksesibilitas data, meminimalisir kesalahan pendataan, serta meningkatkan responsivitas terhadap perubahan stok barang. Terlebih, sistem yang dikembangkan dapat memberikan kemudahan dalam  pemantauan dan manajemen inventory secara keseluruhan, serta memberikan informasi hasil perhitungan jumlah stok barang yang harus dibeli menggunakan perhitungan EOQ lengkap dengan variabel pendukung lain. Dengan demikian, perusahaan dapat meningkatkan efektivitas penggunaan uang pengadaan stok barang.
 
 ## User
-Pada sistem ini dibuat hanya 3 level user dengan hak akses yang berbeda beda pada tiap usernya
+Pada sistem ini dibuat hanya 3 level user dengan hak akses yang berbeda beda pada tiap usernya.
 
   1. Owner
 
